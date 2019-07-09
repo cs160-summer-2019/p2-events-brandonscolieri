@@ -41,6 +41,33 @@
 <script type="text/javascript">
 
 	// your solution here
+	$(function() {
+		var stopButtonPressed = true;
+
+		setInterval(function() {
+			if (stopButtonPressed) {
+				$(".shape-container").append(
+					$("<div class='p2-circle' id='gradient-circle'></div>"),
+					$("<div class='p2-circle bg-purple'></div>"));
+			}
+		}, 1000);
+
+		$(".btn.btn-light.float-right").on("click", () => {
+			stopButtonPressed = false;
+		});
+	});
+
+
+	// for (var i = 0; i < 5; i++) {
+	// 	// ($"<div class="p2-circle bg-purple"></div>").appendTo(document.body.shape-container);
+	// }
+	// $ ("div").click(function() {
+	// 	$ (this).show(2000, function() {
+	// 		$ (this).remove();
+	// 	});
+	// });
+	
+	
 
 </script>
 </body>

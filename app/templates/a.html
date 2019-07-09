@@ -21,7 +21,7 @@
 				<h3>Task 1a</h3>
 			</div>
 			<div class="col-6">
-				<button class="btn btn-light float-right">
+				<button class="btn btn-light float-right" id="resetButton">
 					Reset
 				</button>
 			</div>
@@ -58,12 +58,65 @@
 				</div>
 			</div>
 		</div>
-			
+
 	</div>
 
 
 <script type="text/javascript">
 	// your solution here
+
+	$ (document).ready(() => {
+		$ (".p2-circle.bg-purple").on("click", () => {
+			$ (".p2-circle.bg-purple").hide();
+		});
+	});
+
+	
+	$ (document).ready(() => {
+		$ (".p2-circle.bg-green").on("click", () => {
+			$ (".p2-circle.bg-green" ).hide();
+			$ (".p2-circle.bg-blue" ).hide();
+		});
+	});
+
+	$ (document).ready(() => {
+		$ (".p2-circle.bg-orange.p2-border").on("click", () => {
+			$ (".p2-circle.bg-orange.p2-border").hide();
+		});
+	});
+
+	$ (document).ready(() => {
+		$ ("#gradient-circle").on("mouseover", () => {
+			$ ("#gradient-circle").hide();
+		});
+	});
+
+
+	$ (document).ready(() => {
+		$ ("#resetButton").on("click", () => {
+			$ (".p2-circle.bg-green" ).show();
+			$ (".p2-circle.bg-blue" ).show();
+			$ ("#gradient-circle").show();
+			$ (".p2-circle.bg-orange.p2-border").show();
+			$ (".p2-circle.bg-purple").show();
+		});
+	});
+
+
+
+
+
+	// ("#blueNoBorder").hide();
+	// ( ".gradient-circle" ).hide();
+	// document.getElementsByClassName('p2-circle bg-purple')[0].style.visibility = 'hidden';
+	
+
+	// ("#gradient-circle").hide();
+	// ("#gradient-circle").click(function() {
+	// 	("#gradient-circle").hide()
+	// });
+
+
 
 </script>
 </body>
